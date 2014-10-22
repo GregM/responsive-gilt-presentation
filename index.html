@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Responsive Gilt.com</title>
+
+		<meta name="description" content="Responsive Gilt.com Presentation">
+		<meta name="author" content="Gregory Mazurek">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+		<style>
+			h1,h2,h3,p {
+				color: black;
+			}
+			.reveal .fragment {
+				color:black;
+				font-size: 75px;
+			}
+			.reveal img {
+				vertical-align: top;
+			}
+		</style>
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides" data-background-transition="slide">
+
+				<section data-background="white">
+					<p style="color:black; font-size: 200px;">Responsive Gilt.com</p>
+				</section>
+
+				<section data-background="white">
+					<p style="color:black; font-size: 100px;">Why are we here?</p>
+					<p class="fragment" data-fragment-index="0">Special Ops made Gilt.com responsive</p>
+					<p class="fragment" data-fragment-index="1">You'll probably work in our code</p>
+				</section>
+
+				<section data-background="white">
+					<p style="color:black; font-size: 100px;">Why are you here?</p>
+
+					<p class="fragment" data-fragment-index="0">Work on the front end</p>
+					<p class="fragment" data-fragment-index="1">Red hot engineers</p>
+					<p class="fragment" data-fragment-index="2">Love front end patterns</p>
+				</section>
+
+
+				<section data-background="white">
+					<p style="color:black; font-size: 100px;">Today's Goal:<br>Basic Responsive CSS Training</p>
+					<p class="fragment" data-fragment-index="0">Join Responsive Web Training Workshop HipChat Room</p>
+				</section>
+
+
+				<section data-background="white">
+					<p style="color:black; font-size: 100px;">High Level Overview</p>
+
+					<p class="fragment" data-fragment-index="0">Responsive? What?</p>
+					<p class="fragment" data-fragment-index="1">Some Examples</p>
+					<p class="fragment" data-fragment-index="2">Adaptive Design Tools</p>
+					<p class="fragment" data-fragment-index="3">Responsive Design Tools</p>
+					<p class="fragment" data-fragment-index="4">Testing</p>
+					<p class="fragment" data-fragment-index="5">Workshop -- Web-Search</p>
+				</section>
+
+
+
+
+				<section data-background="#efefef">
+					<p style="color:black; font-size: 100px;">What do we mean when we talk about responsive design?</p>
+				</section>
+
+				<section data-background="#efefef">
+					<p style="color:black; font-size: 100px;">We're talking about both Adaptive Design and "Responsive Design"</p>
+				</section>
+
+				<section data-background="#efefef">
+					<p style="color:black; font-size: 100px;">Responsive Design</p>
+					<p class="fragment" data-fragment-index="0">Width of the viewport</p>
+				</section>
+
+				<section data-background="#efefef">
+					<p style="color:black; font-size: 100px;">Adaptive Design</p>
+					<p class="fragment" data-fragment-index="0">Device capabilities (power, features) and network conditions</p>
+				</section>
+
+
+
+				<section data-background="white">
+					<p style="color:black; font-size: 100px;">Examples!</p>
+				</section>
+
+				<section data-background="white">
+					<p style="color:black; font-size: 100px;">Carousel</p>
+					<img src="lib/images/carousel-js.png"/>
+					<img src="lib/images/carousel-dom.png"/>
+				</section>
+
+				<section data-background="white">
+					<p style="color:black; font-size: 100px;">Search Filtering</p>
+					<img src="lib/images/filtering-modal.png"/>
+					<img src="lib/images/filtering-full.png"/>
+				</section>
+
+
+				<section data-background="#efefef">
+					<p style="color:black; font-size: 100px;">Not All Devices Are Equal</p>
+					<p class="fragment" data-fragment-index="0">commons-web reads user agent</p>
+					<p class="fragment" data-fragment-index="1">triages to one of three buckets called "target experiences"</p>
+				</section>
+
+
+				<section data-background="#efefef">
+					<p style="color:black; font-size: 100px;">Device Target Experiences</p>
+					<p class="fragment" data-fragment-index="0">Minimal</p>
+					<p class="fragment" data-fragment-index="1">Intermediate</p>
+					<p class="fragment" data-fragment-index="2">Full</p>
+				</section>
+
+
+				<section data-background="#efefef">
+					<p style="color:black; font-size: 100px;">Minimal Target Experience</p>
+					<p class="fragment" data-fragment-index="0">isIPod || isIPhone || isBlackberry || isIE6 || isIE7 || isAndroidShell || isAndroid</p>
+				</section>
+
+				<section data-background="#efefef">
+					<p style="color:black; font-size: 100px;">Intermediate Target Experience</p>
+					<p class="fragment" data-fragment-index="0">isIPad</p>
+				</section>
+
+				<section data-background="#efefef">
+					<p style="color:black; font-size: 100px;">Full Target Experience</p>
+					<p class="fragment" data-fragment-index="0">!isMinimalTargetExperience && !isIntermediateTargetExperience</p>
+				</section>
+
+
+				<section data-background="#efefef">
+					<p style="color:black; font-size: 100px;">Target Experience Functions</p>
+					<p class="fragment" data-fragment-index="0">Handlebars</p>
+					<p class="fragment" data-fragment-index="1">JavaScript</p>
+					<p class="fragment" data-fragment-index="2">Scala</p>
+				</section>
+
+
+				<section data-background="#efefef">
+					<p style="color:black; font-size: 100px;">Handlebars:</p>
+					<img src="lib/images/handlebars.png"/>
+				</section>
+
+
+				<section data-background="#efefef">
+					<p style="color:black; font-size: 100px;">JavaScript:</p>
+					<img src="lib/images/js-client.png"/>
+					<img src="lib/images/js-amd.png"/>
+				</section>
+
+				<section data-background="#efefef">
+					<p style="color:black; font-size: 100px;">Scala:</p>
+					<img src="lib/images/scala-methods.png"/>
+				</section>
+
+
+
+
+				<section data-background="white">
+					<p style="color:black; font-size: 100px;">Tools For Responsive Design</p>
+				</section>
+
+				<section data-background="white">
+					<p style="color:black; font-size: 100px;">4 Viewport Breakpoints</p>
+					<p class="fragment" data-fragment-index="0" style="text-align:left; margin-left:20%;">wide..........desktop</p>
+					<p class="fragment" data-fragment-index="1" style="text-align:left; margin-left:20%;">medium...iPad</p>
+					<p class="fragment" data-fragment-index="2" style="text-align:left; margin-left:20%;">narrow.....mobile landscape</p>
+					<p class="fragment" data-fragment-index="3" style="text-align:left; margin-left:20%;">tiny............mobile portrait</p>
+				</section>
+
+				<section data-background="white">
+					<p style="color:black; font-size: 100px;">LESS Variables</p>
+					<img src="lib/images/css-gilt-less.png"/>
+				</section>
+
+				<section data-background="white">
+					<p style="color:black; font-size: 100px;">Inline Selector Overrides</p>
+					<img src="lib/images/css-inline.png"/>
+				</section>
+
+
+				<section data-background="white">
+					<p style="color:black; font-size: 100px;">Modernizr: CSS Touch/No-Touch Classes</p>
+					<img src="lib/images/modernizr-touch.png"/>
+				</section>
+
+				<section data-background="white">
+					<p style="color:black; font-size: 100px;">Browser Detect Features:</p>
+					<img src="lib/images/browser-detect.png"/>
+				</section>
+
+
+
+				<section data-background="#efefef">
+					<p style="color:black; font-size: 100px;">Testing and QA</p>
+				</section>
+
+				<section data-background="#efefef">
+					<p style="color:black; font-size: 100px;">Selenium Testing Helper</p>
+					<img src="lib/images/testing-methods.png"/>
+				</section>
+
+				<section data-background="#efefef">
+					<p style="color:black; font-size: 100px;">QA on your device</p>
+				</section>
+
+				<section data-background="#efefef">
+					<p style="color:black; font-size: 100px;">Testing Caveats</p>
+					<p class="fragment" data-fragment-index="0">Chrome Emulator is OK</p>
+					<p class="fragment" data-fragment-index="1">iOS is better</p>
+					<p class="fragment" data-fragment-index="2">Device is best and required before merging to master</p>
+				</section>
+
+
+				<section data-background="white">
+					<p style="color:black; font-size: 100px;">Workshop Time</p>
+					<p class="fragment" data-fragment-index="0">gg-gerrit-clone web-search</p>
+					<p class="fragment" data-fragment-index="1">gg-props-tunnel 131 -p web-search -w zookeeper</p>
+					<p class="fragment" data-fragment-index="2">nginxstart</p>
+					<p class="fragment" data-fragment-index="3">chrome: localhost.com/search</p>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				width: "100%",
+				top: "-20px",
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
